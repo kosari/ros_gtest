@@ -46,13 +46,13 @@ double squareRoot(const double x){
 
 }
 
-TEST(SquareRootTest, PositiveNos) {
+TEST(SquareRootTest, positiveNos) {
     EXPECT_EQ(18.0, squareRoot(324.0));
     EXPECT_EQ(25.4, squareRoot(645.16));
- //   EXPECT_EQ(50.3321, squareRoot(2533.310224));
+    //EXPECT_EQ(50.3321, squareRoot(2533.310224));
 }
 
-TEST(SquareRootTest, ZeroAndNegativeNos){
+TEST(SquareRootTest, zeroAndNegativeNos){
     ASSERT_EQ(0.0, squareRoot(0.0));
     ASSERT_EQ(-1, squareRoot(-22.0));
 }

@@ -47,3 +47,33 @@ should run the test
 [  PASSED  ] 2 tests.
 
 
+
+Launch file:
+add a test in the launch file as:
+<launch>
+  <param name="string"  value="mystring" />
+  <test test-name="gest_test" pkg="gtest_example" type="gtest_test" />
+</launch>
+
+
+now run with rostest gtest_example gtest.launch
+
+SUMMARY
+ * RESULT: SUCCESS
+ * TESTS: 2
+ * ERRORS: 0
+ * FAILURES: 0
+
+
+results are in 
+build/test_results/gtest_example/rosunit-gest_test.xml
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="2" failures="0" disabled="0" errors="0" timestamp="2013-12-08T23:24:46" time="0" name="AllTests">
+  <testsuite name="SquareRootTest" tests="2" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="PositiveNos" status="run" time="0" classname="SquareRootTest" />
+    <testcase name="ZeroAndNegativeNos" status="run" time="0" classname="SquareRootTest" />
+  </testsuite>
+</testsuites>
+
