@@ -1,0 +1,49 @@
+This is an example for making gtests in ros.
+
+The assumption is that you start from a working ros package.
+
+create a test folder alongside your src and launch folders.
+
+package/
+	src
+	launch
+	test
+
+create your testfile: find the example gtest_example_node.cpp
+
+now edit the CMakeList.txt to add the following lines:
+
+###########
+## Test ##
+###########
+catkin_add_gtest(gtest_test test/gtest_test.cpp)
+if(TARGET gtest_test)
+   target_link_libraries(gtest_test ${catkin_LIBRARIES})
+ endif()
+
+
+
+now in ros workspace
+
+$catkin_make
+
+$catkin_make run_tests
+
+should run the test
+
+
+
+[==========] Running 2 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 2 tests from SquareRootTest
+[ RUN      ] SquareRootTest.PositiveNos
+[       OK ] SquareRootTest.PositiveNos (0 ms)
+[ RUN      ] SquareRootTest.ZeroAndNegativeNos
+[       OK ] SquareRootTest.ZeroAndNegativeNos (0 ms)
+[----------] 2 tests from SquareRootTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 1 test case ran. (1 ms total)
+[  PASSED  ] 2 tests.
+
+
