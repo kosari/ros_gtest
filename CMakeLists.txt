@@ -37,6 +37,7 @@ include_directories(
 
 ###########
 ## Test ##
+###########
 catkin_add_gtest(gtest_test test/gtest_test.cpp)
 if(TARGET gtest_test)
    target_link_libraries(gtest_test ${catkin_LIBRARIES})
