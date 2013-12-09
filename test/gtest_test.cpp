@@ -1,8 +1,4 @@
-#include "ros/ros.h"
-#include "std_msgs/String.h"
 
-#include <sstream>
-#include <gtest/gtest.h>
 /*********************************************************************
 * Software License Agreement (BSD License)
 *
