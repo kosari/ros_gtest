@@ -1,0 +1,4 @@
+<launch>
+  <param name="string"  value="mystring" />
+  <test test-name="gest_test" pkg="gtest_example" type="gtest_test" />
+</launch>
