@@ -11,8 +11,8 @@ find_package(catkin REQUIRED COMPONENTS
 
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES gtest_example
-#  CATKIN_DEPENDS roscpp std_msgs
+  LIBRARIES gtest_example
+  CATKIN_DEPENDS roscpp std_msgs
 #  DEPENDS system_lib
 )
 
